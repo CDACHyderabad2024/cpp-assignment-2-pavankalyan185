@@ -1,0 +1,224 @@
+1)
+#include<iostream>
+using namespace std;
+bool checkPrime(int);
+
+int  main()
+{
+    int num;
+  cout<<"Enter any number : ";
+  cin>>num;
+ bool is_Prime= checkPrime(num);
+ if(is_Prime){
+    cout<<"The number "<<num<<" is  Prime."<<endl;
+ }
+ else{
+    cout<<"The number "<<num<<" is not Prime"<<endl;
+     }
+}
+bool checkPrime(int x)
+{
+    if(x==1 || x==0){
+        return false;
+    }
+  for(int i=2;i<=(x/2);i++)
+  {
+    if((x%i)==0){
+        return false;
+    }   
+  }
+  return true;
+}
+
+Enter any number : 7
+The number 7 is  Prime.
+
+===================================================================================
+2)
+#include<iostream>
+using namespace std;
+bool checkPrime(int);
+
+int  main()
+{
+    int num;
+  cout<<"Enter any number : ";
+  cin>>num;
+  cout<<"The first "<<num<<" Prime numbers are : "<<endl;
+
+    int count=0;
+    int n=1;
+    while(n>=1){
+    bool is_Prime= checkPrime(n);
+    if(is_Prime){
+    cout<<n<<" ";
+    count++;
+        }
+        if(count==num){
+            break;
+        }
+       n++;
+    }    
+    
+  
+ 
+}
+bool checkPrime(int x)
+{
+    if(x==1 || x==0){
+        return false;
+    }
+  for(int i=2;i<=(x/2);i++)
+  {
+    if((x%i)==0){
+        return false;
+    }   
+  }
+  return true;
+}
+Enter any number : 5
+The first 5 Prime numbers are : 
+2 3 5 7 11
+
+=========================================================================
+3)
+#include<iostream>
+using namespace std;
+
+int main() 
+{
+    int n=26;
+    cout<<"The Pyramid is as below: "<<endl;
+    
+    for(int i=1;i<=n;i++){
+        char ch='A';
+        for(int j=1;j<=i;j++){
+            cout<<ch++;
+        }
+        cout<<endl;
+    }
+    return 0;
+
+}
+
+A    
+AB   
+ABC  
+ABCD 
+ABCDE
+ABCDEF
+ABCDEFG
+ABCDEFGH
+ABCDEFGHI
+ABCDEFGHIJ
+ABCDEFGHIJK
+ABCDEFGHIJKL
+ABCDEFGHIJKLM
+ABCDEFGHIJKLMN
+ABCDEFGHIJKLMNO
+ABCDEFGHIJKLMNOP
+ABCDEFGHIJKLMNOPQ
+ABCDEFGHIJKLMNOPQR
+ABCDEFGHIJKLMNOPQRS
+ABCDEFGHIJKLMNOPQRST
+ABCDEFGHIJKLMNOPQRSTU
+ABCDEFGHIJKLMNOPQRSTUV
+ABCDEFGHIJKLMNOPQRSTUVW
+ABCDEFGHIJKLMNOPQRSTUVWX
+ABCDEFGHIJKLMNOPQRSTUVWXY
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+=====================================================================================
+4)
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int add(int,int);
+int sub(int,int);
+int mul(int,int);
+float divi(int,int);
+int main()
+{
+    int a,b,c,n;
+    float d;
+cout<<"Enter the First Number: ";
+cin>>a;
+cout<<"Enter the Second Number: ";
+cin>>b;
+cout<<endl;
+cout<<"Enter the operation you want to perform:"<<endl;
+cout<<"1.Additon"<<endl;
+cout<<"2.Substraction"<<endl;
+cout<<"3.Multiplication"<<endl;
+cout<<"4.Division"<<endl;
+cout<<"5.Exit"<<endl;
+cin>>n;
+switch(n)
+{
+    case 1:
+    c=add(a,b);
+    cout<<"The Addition of "<<a<<" and "<<b<<" is : "<<c<<endl;
+    break;
+    case 2:
+    c=sub(a,b);
+    cout<<"The Substraction of "<<a<<" and "<<b<<" is : "<<c<<endl;
+    break;
+    case 3:
+    c=mul(a,b);
+    cout<<"The Multiplication of "<<a<<" and "<<b<<" is : "<<c<<endl;
+    break;
+    case 4:
+    d=divi(a,b);
+    cout<<"The Division of "<<a<<" and "<<d<<" is : "<<d<<endl;
+    break;
+    case 5:
+    exit(0);
+}
+return 0;
+}
+int add(int x,int y)
+{
+    return x+y;
+}
+int sub(int x,int y)
+{
+    return x-y;
+}
+int mul(int x,int y)
+{
+    return x*y;
+}
+float divi(int x, int y)
+{
+    return static_cast<float>(x)/y;
+}
+=====================================================================================
+5)
+#include<iostream>
+using namespace std;
+
+int main() 
+{
+    int n;
+    cout<<"Enter any number: ";
+    cin>>n;
+    cout<<endl;
+
+    for(int i=1;i<=n;i++){
+        int num=1;
+        for(int j=1;j<=i;j++){
+            cout<<num++;
+        }
+        cout<<endl;
+    }
+    return 0;
+
+}
+
+Enter any number: 5
+
+1
+12
+123
+1234
+12345
